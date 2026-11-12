@@ -1,3 +1,159 @@
+## Carausu Nelu-Rares-Ionut 
+## 323CBb
+
+## Taskset 1
+
+## Task 1
+In task-ul 1, am facut suma tuturor pasilor transformand din Integer in String
+si din String in Float, iar aceasta suma am impartit-o la numarul elementelor 
+insumate.
+
+## Task 2
+La task-ul 2, la primul punct am facut o functie care calculeaza numarul total 
+de pasi al unei singure persoane. Am verificat apoi pentru fiecare persoana 
+daca acest total este mai mare sau egal cu 1000, însumând numărul de
+peroane cu cel putin 1000 de pasi.
+
+La al doilea punct, am impartit numarul de persoane determinat la primul punct
+la numarul total de persoane existente in fisier.
+
+La al treilea punct, am adunat numarul total de pasi al fiecarei persoane la o
+suma totala, pe care am impartit-o la numarul persoanelor.
+
+## Task 3
+La task-ul 3, am transpus tabelul, apoi am adunat pasii facuti la fiecare ora de
+toate persoanele, iar la final am impartit fiecare suma la numarul persoanelor.
+
+## Task 4
+La task-ul 4, am adunat numarul persoanelor in functie de tipul de minute active
+si de range-ul in care se incadra fiecare. Functia get_range primeste 3 parametri,
+din care primul este un numar de la 0 la 2 (0 - pentru very active minutes, 
+1 - pentru fairly active minutes, 2 - pentru lightly active minutes), al doilea 
+parametru este un numar de la 1 la 3 pentru fiecare range (1 - pentru range1, 
+2 - pentru range2, 3 - pentru range3), iar   al treilea parametru este tabelul.
+
+## Task 5
+La task-ul 5, am folosit mergeSort pentru a sorta persoanele din tabel, 
+crescator dupa pasii totali facuti de fiecare, iar in caz de egalitate, 
+i-am sortat alfabetic.
+
+## Task 6
+La task-ul 6, am facut media primelor 4 ore, in care persoanele au facut pasi,
+media ultimelor 4 ore, ambele pentru fiecare persoana, apoi modulul diferentei
+dintre acestea. Am folosit mergeSort pentru a sorta crescator dupa diferenta, 
+iar in caz de egalitate, alfabetic.
+
+## Task 7
+La task-ul 7, am facut o functie care aplica functia primita ca parametru pentru
+fiecare element de pe un rand, iar apoi am aplicat aceasta functie pentru fiecare
+rand al tabelului.
+
+## Task 8
+La task-ul 8, functia get_sleep_total insumeaza numarul total de ore de somn 
+din toate cele 7 zile de la o persoana.\n
+
+## Carausu Nelu-Rares-Ionut
+## 323CB
+
+
+## Tema 2 PP
+
+
+## Task 1
+
+La acest task, verific daca elementul de pe pozitia corespunzatoare numelui 
+coloanei specificate este o valoare numerica. 
+In caz afirmativ, sortez corespunzator dupa valorile din acesta coloana, iar 
+in caz de egalitate, verific daca elementul din prima coloana este valoare 
+numerica sau string si, de asemenea, sortez corespunzator. 
+In caz negativ, repet aceeasi operatie ca mai sus doar ca o sortare 
+corespunzatoare pentru string-uri.
+
+Pentru a verifica daca un string este o valoare numerica, am folosit o functie
+preluata de pe urmatorul link (deoarece nu aveam voie sa import altceva decat ce
+era deja importat la tema):
+https://stackoverflow.com/questions/30029029/haskell-check-if-string-is-valid-number
+
+## Task 2
+
+La task-ul 2, verific daca numele coloanelor, adica header-ele tabelurilor, 
+sunt aceleasi. In caz afirmativ, concatenez toate randurile din tabelul 2, 
+cu exceptia header-ului, la finalul tabelului 1. In caz negativ, returnez
+tabelul 1 nemodificat.
+
+## Task 3
+
+La task-ul 3, iau cate un rand din fiecare tabel si le concatenez, pana termin
+de parcurs randurile din tabelul mai scurt. Restul de randuri din tabelul mai 
+lung le completez cu string-uri goale. Numarul de string-uri goale este egal 
+cu numarul coloanelor din tabelul mai scurt.
+
+## Task 4
+
+Pasul 1:
+Iau fiecare rand din primul tabel si caut in al doilea tabel un rand in care 
+valoarea de la pozitia cheii este aceeasi in ambele randuri, iar apoi le 
+concatenez.
+Daca nu gasesc in al doilea tabel un rand care sa verifice conditia, atunci
+trec la urmatorul rand din primul tabel si repet operatia.
+
+Pasul 2:
+Am obtinut un tabel cu randuri concatenate din cele 2 tabele initiale.
+Apoi, am luat fiecare element din header-ul tabelului 1 si am cautat elementele
+comune din acesta si din header-ul tabelului 2, iar in fiecare rand din tabelul
+la pasul 1, am verificat daca la pozitia celei de-a doua aparitii a elemnetului
+comun din cele 2 headere este un string gol (""). In caz afirmativ, l-am sters
+pe acesta, iar in caz negativ, l-am interschimbat cu elementul aflat la pozitia 
+primei aparitii a elementului comun din cele 2 headere si il sterg pe cel aflat
+acum la pozitia celei de-a doua aparitii a elemnetului comun din cele 2 headere.
+
+Din tabelul format la pasul 1, am luat rand cu rand pentru a ajunge la forma
+finala. Astfel, mi-am construit o lista de tabeluri de tipul:
+
+h = header tabel obtinut la pasul 1
+[h,a,b,c,d,e,f] = tabel obtinut la pasul 1
+
+[[h,h],[[h,a],[h,b],[h,c],[h,d],[h,e],[h,f]] = lista de tabeluri
+
+Astfel, am luat element cu element din aceasta lista de tabeluri, si am modificat
+pentru fiecare element comun din header-ul tabelului 1 si header-ul tabelului 2, 
+pastrand mereu un update al header-ului tabelului obtinut la pasul 1.
+
+Ex:
+Fie elementul din lista de tabeluri: [h,x]
+Cand modificam x, modificam si h, astfel incat sa mentin corectitudinea.
+
+La final, transformat lista de tabeluri intr-un tabel [h,h,h,a,h,b,h,c,h,d,h,e,h,f], 
+apoi sterg duplicatele randului h, pastrand doar prima aparitie, obtinand 
+[h,a,b,c,d,e,f], revenind astfel la forma tabelului obtinut la pasul 1.
+
+Atunci, cand am facut concatenarea la pasul 1, pentru randurile din primul tabel
+pentru care nu am gasit corespondent in tabelul 2, am pus un element de tipul [],
+iar acum, la final, sterg toate aceste elemente.
+
+## Task 5
+
+La acest task, parcurg randurile din primul tabel, iar pentru fiecare rand aplic
+o functie primita ca parametru intre acest rand si fiecare rand din tabelul 2.
+La final, obtin un tabel de lungime egala cu 
+((length (tabel 1)) - 1) * ((length (tabel 2)) - 1) + 1.
+
+## Task 6
+
+La task-ul 6, transpun tabelul primit ca parametru, astfel incat, numele
+coloanelor vor fi header-ul fiecarui rand din tabelul nou format. Parcurg 
+lista numelor coloanelor data ca parametru si verific ce nume se regasesc si
+in tabelul transpus. Pastrez randurile care au numele de coloane comune cu cele
+din lista. La final, transpun din nou tabelul cu randurile pastrate, obtinand
+un tabel de forma celui initial, dar cu anumite coloane eliminate.
+
+## Task 7
+
+La task-ul 7, aplic conditia data pentru fiecare element din coloana al 
+carei nume este dat ca parametru. In final, pastrez randurile al caror 
+element, aflat in coloana respectiva, 
+respecta conditia (conditia returneaza True).\n
+
 ## Cărăușu Nelu-Rareș-Ionuț
 ## 323CB
 
