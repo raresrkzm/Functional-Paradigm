@@ -1,0 +1,21 @@
+## Cărăușu Nelu-Rareș-Ionuț
+## 323CB
+
+
+## Tema 3 PP
+
+
+## 3.1
+La acest task, am enrolat functia eval in clasa Eval pentru toate optiunile 
+tipului de date Query. Pentru asta, am folosit o parte din functiile de la 
+TaskSet 2 (Tema 2), iar pentru restul am definit functii noi.
+
+## 3.2
+La task-ul 2, am enrolat functia feval in clasa FEval o data pentru cazul in 
+care a-ul din tipul de date (FilterCondition a) este Float si inca o data 
+pentru cazul in care este String. Pentru fiecare dintre aceste cazuri, am 
+luat toate optiunile tipului de date (FilterCondition a).
+
+# 3.3 
+La acest task, am definit functia Filter folosind functia functia feval, 
+enrolata in FEval la task-ul anterior.
